@@ -236,6 +236,7 @@ class MaCELenia(Lenia):
     @b.setter
     def b(self, value):
         self._beta = value
+        self.beta_slider.value = value
 
     def process_event(self, event, camera=None):
         """

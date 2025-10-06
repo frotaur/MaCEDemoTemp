@@ -55,6 +55,7 @@ class MaCELeniaXChan(MaCELenia):
         super().update_params(params, k_size_override=k_size_override)
         if "alpha" in params:
             self.alpha = params["alpha"]
+            self.alpha_slider.value = self.alpha
 
     def step(self):
         """

@@ -34,7 +34,7 @@ class MainWindow:
         self.H,self.W = world_size
         self.device = device
 
-        self.fps=60 # Visualization FPS
+        self.fps=120 # Visualization FPS
         self.video_fps=60 # Saved video FPS
         self.tablet_mode = tablet_mode
 

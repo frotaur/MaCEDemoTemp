@@ -1,6 +1,6 @@
 import torch, torch.nn.functional as F
-from .utils import torch_utils
-from .automaton import Automaton
+from ..utils import torch_utils
+from ..automaton import Automaton
 import cv2
 from pathlib import Path
 import pygame
@@ -87,7 +87,7 @@ class MaCENCA(Automaton):
 
         base_2 = base / 255
         
-        # base_2[..., :3] *= base_2[..., 3:]
+        base_2[..., :3] *= base_2[..., 3:]
         base_torch = torch.tensor(base_2, dtype=torch.float32, requires_grad=True).permute((2, 0, 1)).to(self.device)
         
         seed = torch.zeros((self.model.C), device= self.device)

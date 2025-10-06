@@ -7,7 +7,7 @@ def parse_args():
     parser.add_argument('-s', '--screen', nargs=2, type=int, default=(720, 1280),
                       help='Screen dimensions as height width (default: 720 1280)')
 
-    parser.add_argument('-w', '--world', nargs=2, type=int, default=(250, 250),
+    parser.add_argument('-w', '--world', nargs=2, type=int, default=(360, 640),
                       help='World dimensions as height width (default: 250 250)')
 
     parser.add_argument('-d', '--device', type=str, default='cpu',
