@@ -1,0 +1,9 @@
+easydict
+matplotlib
+numpy
+pygame
+pyperlin
+showtens
+torch
+torchvision
+torchenhanced

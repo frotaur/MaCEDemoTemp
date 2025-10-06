@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyca"
+version = "0.1.0"
+authors = [
+    { name = "Vassilis Papadopoulos", email = "vassilis.physics@gmail.com" },
+]
+description = "Fork of PyCA, made to display live simulations of MaCE in different forms."
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies", "optional-dependencies"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pyca"]
+include = ["pyca/interface/files/*"]
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
