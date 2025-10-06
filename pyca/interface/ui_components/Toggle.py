@@ -48,6 +48,7 @@ class Toggle(Button):
         """
         Sets the button's appearance based on the current state.
         """
+        print('FIRST SET ASPECT : state', self.is_state1)
         if self.is_state1:
             self.text = self.state1
             self.bg_color = self.state1_bg_color

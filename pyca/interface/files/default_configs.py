@@ -22,18 +22,7 @@ DEFAULTS = {
         "interest_files": "./demo_data/demo_macelenia_xchan",
         "save_dir": "./data/macelenia_xchan_saved_params"
     },
-    "NeuralCA" : {
-        "models_folder": './demo_data/NCA_models'
-    },
-    "VonNeumann" : {
-        "element_size": 9
-    },
-    "TotalisticCA1D" : {
-        "wolfram_num": 1203,
-        "k": 3,
-        "r": 3
-    },
-    "ElementaryCA": {
-        "wolfram_num": 30
+    "MaCENCA" : {
+        "saved_folder": "./demo_data/demo_macenca",
     }
 }

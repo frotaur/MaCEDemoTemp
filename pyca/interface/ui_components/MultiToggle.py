@@ -5,7 +5,7 @@ import pygame
 
 class MultiToggle(Button):
     def __init__(self, states, fract_position=(0,0), fract_size=(0.05,0.1), init_true=True,
-                 state_bg_colors=[(20, 20, 20)]*2,
+                 state_bg_colors=[(20, 20, 20)],
                  text_color=(230, 230, 230), font_path: str = BASE_FONT_PATH):
         """
         Initializes the toggle component.
@@ -25,24 +25,23 @@ class MultiToggle(Button):
 
         # Store toggle-specific attributes
         self.states = states
-        self.state_bg_colors = state_bg_colors
+        if(len(state_bg_colors) != len(states)):
+            self.state_bg_colors = [(20, 20, 20)] * len(states)
+        else:
+            self.state_bg_colors = state_bg_colors
 
         # Current state (index of the active state)
         self.current_state_index = 0
 
         # Update pressed colors for all states
         self.pressed_colors = [
-            tuple(max(0, bg-30) for bg in color) for color in state_bg_colors
+            tuple(max(0, bg-30) for bg in color) for color in self.state_bg_colors
         ]
 
         # Update border colors for all states
         self.border_colors = [
-            tuple(min(bg+30, 255) for bg in color) for color in state_bg_colors
+            tuple(min(bg+30, 255) for bg in color) for color in self.state_bg_colors
         ]
-        self.border_colors = [
-            tuple(min(bg+30, 255) for bg in color) for color in state_bg_colors
-        ]
-
         self._set_aspect()
     
     def _set_aspect(self):
