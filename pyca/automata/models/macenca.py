@@ -112,7 +112,6 @@ class MaCENCA(Automaton):
         if mouse.left and mouse.inside:
             if(self.seed_next.state): 
                 self.put_seed_at(mouse.x, mouse.y)
-                self.seed_next.state = False
             elif(self.add_matter.state):
                 self.add_or_remove_mass(mouse.x, mouse.y, add=True)
             elif(self.add_matter.state == False):
